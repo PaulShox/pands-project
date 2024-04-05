@@ -14,7 +14,7 @@ Fifty samples from each of the species were examined using the following four me
 - Petal Length
 - Petal Width
 
-Below is a picture of the three species ![Iris Flower Species]('Iris_Image.png')
+Below is a picture of the three species ![Iris Flower Species](Iris_Image.png)
 Image sourced from [Kaggle](https://www.kaggle.com/code/sunaysawant/iris-eda)
 
 More information about the dataset can be found on [Wikepedia](https://en.wikipedia.org/wiki/Iris_flower_data_set)
