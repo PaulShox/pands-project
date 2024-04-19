@@ -92,7 +92,7 @@ iris.columns = [
 # HISTOGRAMS BY SPECIES
 
 # 1. SETOSA
-# Create dataframe with only setosa data
+# Create dataframe with Iris-setosa values only
 # setosa = iris[iris['class'] == 'Iris-setosa']
 
 # Use matplotlib to plot and style the figure that will house the histogram axes
@@ -109,6 +109,7 @@ iris.columns = [
 # plt.show()
 
 # 2. VERSICOLOR
+# Create dataframe with Iris-versicolor values only
 # versicolor = iris[iris['class'] == 'Iris-versicolor']
 
 # Use matplotlib to plot and style the figure that will house the histogram axes
@@ -125,6 +126,7 @@ iris.columns = [
 # plt.show()
 
 # 3. Virginica
+# Create dataframe with Iris-virginica values only
 # virginica = iris[iris['class'] == 'Iris-virginica']
 
 # Use matplotlib to plot and style the figure that will house the histogram axes
