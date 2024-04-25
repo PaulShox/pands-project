@@ -89,6 +89,18 @@ iris.columns = [
 # setosa = iris[iris['class'] == 'Iris-virginica'] 
 # print(setosa.describe())
 
+# Plot averages of measurement variables for each species
+# Set up the structure of the figure and number of axes.
+# fig, axes = plt.subplots(2, 2, figsize=(12, 10))
+# fig.suptitle('Average Measurements per Species', fontsize=20)
+# plt.style.use('ggplot')
+
+# Setup the variable to be plotted and analysed in each axes.
+# sns.barplot(data=iris, x='class', y='sepal_length_cm', ax=axes[0, 0], errorbar=None).set(title='Average Sepal Length')
+# sns.barplot(data=iris, x='class', y='sepal_width_cm', ax=axes[0, 1], errorbar=None).set(title='Average Sepal Width')
+# sns.barplot(data=iris, x='class', y='petal_length_cm', ax=axes[1, 0], errorbar=None).set(title='Average Petal Length')
+# sns.barplot(data=iris, x='class', y='petal_width_cm', ax=axes[1, 1], errorbar=None).set(title='Average Petal Width')
+
 # HISTOGRAMS BY SPECIES
 
 # 1. SETOSA
@@ -125,7 +137,7 @@ iris.columns = [
 # fig.suptitle('Iris Versicolor Distributions', fontsize=20)
 # plt.show()
 
-# 3. Virginica
+# 3. VIRGINICA
 # Create dataframe with Iris-virginica values only
 # virginica = iris[iris['class'] == 'Iris-virginica']
 
