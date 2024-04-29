@@ -28,7 +28,10 @@ iris.columns = [
                 ]     
 
 # Check that Column titles have assigned as expected.
-# print(iris.head(5))             
+# print(iris.head(5))   
+
+# Check all 150 rows have imported and that there are no null values
+# iris.info()         
 
 # SUMMARY DATA
 # Generate summary data for the numerical variables.
@@ -39,6 +42,66 @@ iris.columns = [
 
 # Export the summary dataframe as a txt file
 # summary.to_string('summary.txt')
+
+# SUMMARY DATA BY MEASUREMENT VARIABLE
+
+# # Generate summary data for sepal length for each species
+# iris.groupby(['class']).describe()['sepal_length_cm']
+
+# Generate summary data for sepal width for each species
+# iris.groupby(['class']).describe()['sepal_width_cm']
+
+# Generate summary data for petal length for each species
+# iris.groupby(['class']).describe()['petal_length_cm']
+
+# Generate summary data for petal width for each species
+# iris.groupby(['class']).describe()['petal_width_cm']
+
+# SUMMARY DATA BY SPECIES
+
+# setosa summary data
+# setosa = iris[iris['class'] == 'Iris-setosa'] 
+# print(setosa.describe())
+
+# versicolor summary data
+# setosa = iris[iris['class'] == 'Iris-versicolor'] 
+# print(setosa.describe())
+
+# virginica summary data
+# setosa = iris[iris['class'] == 'Iris-virginica'] 
+# print(setosa.describe())
+
+# Plot averages of measurement variables for each species
+# Set up the structure of the figure and number of axes.
+# fig, axes = plt.subplots(2, 2, figsize=(12, 10))
+# fig.suptitle('Average Measurements per Species', fontsize=20)
+# plt.style.use('ggplot')
+
+# Setup the variable to be plotted and analysed in each axes.
+# sns.barplot(data=iris, x='class', y='sepal_length_cm', ax=axes[0, 0], errorbar=None).set(title='Average Sepal Length')
+# sns.barplot(data=iris, x='class', y='sepal_width_cm', ax=axes[0, 1], errorbar=None).set(title='Average Sepal Width')
+# sns.barplot(data=iris, x='class', y='petal_length_cm', ax=axes[1, 0], errorbar=None).set(title='Average Petal Length')
+# sns.barplot(data=iris, x='class', y='petal_width_cm', ax=axes[1, 1], errorbar=None).set(title='Average Petal Width')
+
+# SETOSA SEPAL WIDTH INVESTIGATION
+
+# Standard Deviation of Setosa Sepal Widths
+
+# Create a dataframe with Setosa data only.
+# seto = iris[iris['class'] == 'Iris-setosa']
+# Generate the standard deviation for the sepal width column only. 
+# sd = seto['sepal_width_cm'].std()
+# Round the figure to 5 decimal places.
+# round(sd, 5) 
+# print(sd)
+
+# Boxplot for Setosa sepal widths.
+
+# Create a dataframe with Setosa data only.
+# seto = iris[iris['class'] == 'Iris-setosa']
+# Generate a boxplot for the sepal width column only
+# seto.boxplot(['sepal_width_cm'])
+
 
 # HISTOGRAMS
 # Assign variables to each of the dataset measurement variables
@@ -74,32 +137,6 @@ iris.columns = [
 
 # Save a copy of the histograms as a png file
 # plt.savefig('histogram.png')
-
-# SUMMARY DATA BY SPECIES
-
-# setosa summary data
-# setosa = iris[iris['class'] == 'Iris-setosa'] 
-# print(setosa.describe())
-
-# versicolor summary data
-# setosa = iris[iris['class'] == 'Iris-versicolor'] 
-# print(setosa.describe())
-
-# virginica summary data
-# setosa = iris[iris['class'] == 'Iris-virginica'] 
-# print(setosa.describe())
-
-# Plot averages of measurement variables for each species
-# Set up the structure of the figure and number of axes.
-# fig, axes = plt.subplots(2, 2, figsize=(12, 10))
-# fig.suptitle('Average Measurements per Species', fontsize=20)
-# plt.style.use('ggplot')
-
-# Setup the variable to be plotted and analysed in each axes.
-# sns.barplot(data=iris, x='class', y='sepal_length_cm', ax=axes[0, 0], errorbar=None).set(title='Average Sepal Length')
-# sns.barplot(data=iris, x='class', y='sepal_width_cm', ax=axes[0, 1], errorbar=None).set(title='Average Sepal Width')
-# sns.barplot(data=iris, x='class', y='petal_length_cm', ax=axes[1, 0], errorbar=None).set(title='Average Petal Length')
-# sns.barplot(data=iris, x='class', y='petal_width_cm', ax=axes[1, 1], errorbar=None).set(title='Average Petal Width')
 
 # HISTOGRAMS BY SPECIES
 
