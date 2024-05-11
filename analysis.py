@@ -191,7 +191,38 @@ iris.columns = [
 # fig.suptitle('Iris Virginica Distributions', fontsize=20)
 # plt.show()
 
+# CORRELATION ANALYSIS
+# PLOTTING CORRELATIONS
+
+# Create Datframe 
+# measures = iris[
+#                 ['class',
+#                 'sepal_length_cm',
+#                 'sepal_width_cm',
+#                 'petal_length_cm',
+#                 'petal_width_cm']
+# ]
+# Use pairplot to create correlation plot
+# pairplot(measures, hue='class', diag_kind='hist')
+# plt.show()
 
 
+# PLOT A LINE OF BEST FIT BETWEEN TWO VARIABLES
+# Use Seaborn to plot lines of best fit between only two variables on the pairplot
+# sns.pairplot(iris, 
+#             # Set the y-axis variable as sepal length
+#              y_vars=['sepal_length_cm'], 
+#              # Set the x-axis variable as petal length
+#              x_vars=['petal_length_cm'], 
+#              # Seaborn regplot
+#              kind='reg', 
+#              height=5, 
+#              # Sets the ratio of the width to the height
+#              aspect=1.2,
+#              # Formats the colours and size of the line and scatter plot data points
+#              plot_kws={'ci' : None, 'color' : 'red',
+#                        'scatter_kws' : {'color' : 'blue'}}
+#              ).set(title='Line of Best Fit - Sepal Length v Petal Length')
+# plt.show()
 
-
+# APPLY LINES OF BEST FIT TO ALL AXES IN THE CORRELATION FIGURE
